@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    align-items: center;
+    background-color: #c87c73;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+#center{
+    background-color: #f8f8f8; /* Light background for center container */
+    /* padding: 2rem; */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    width: 400px; /* Container width */
+    text-align: center;
+}
+#header{
+    display: flex;
+    justify-content: space-between; 
+    background-color: #c8c1c3;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+}
+.head_left, #head_right{
+    display: flex;
+}
+.head_left #red, .head_left #yellow, .head_left #green, #head_right .btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 0.2rem;
+}
+#red {
+    background-color: #ff626c;
+}
+#yellow{
+    background-color: #ffcc3b;
+}
+#green{
+    background-color: #30b367;
+}
+#head_right .btn{
+    background-color: #4e4d5f;
+}
+.image-container {
+    perspective: 1000px; /* 3D effect ko enhance karta hai */
+    width: 150px; /* container ki width */
+    height: 150px; /* container ki height */
+    margin: 1rem auto; /* Center the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dice1{
+    width: 100px;
+    transition: transform 1s;
+}
+#roll-btn {
+    width: 120px;
+    height: 40px;
+    background-color: #4e4d5f; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Button text size */
+    transition: transform 0.2s, background-color 0.3s; /* Smooth animation */
+}
+#roll-btn:active {
+    transform: scale(0.9); /* Scale down effect when clicked */
+    background-color: #3b3b50; /* Darker color when clicked */
+}
+/* Dice rolling animation */
+@keyframes roll {
+    from {
+        transform: rotateY(0deg); /* Starting point */
+    }
+    to {
+        transform: rotateY(360deg); /* Complete one rotation */
+    }
+}
+.dice1.animate {
+    animation: roll 1s ease-in-out; /* Roll animation for 1 second */
+}
+
+/* Styling the result text */
+#random-num {
+    font-size: 1.2rem;
+    margin-top: 1rem; /* Space above the result */
+    color: #333; /* Dark color for contrast */
+    margin-bottom: 1rem;
+}
+
+.dice1 {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Forces image to cover the entire area */
+    transition: transform 1s; /* Smooth transition effect */
+    display: block; /* Ensure it's treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+
+
